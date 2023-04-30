@@ -28,7 +28,6 @@ contract Store {
 
     }
 
-
     function setNumber(uint256 newNumber) public {
         number = newNumber;
     }

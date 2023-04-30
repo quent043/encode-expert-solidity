@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Homework4/foundry-encode-template" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Homework4/foundry-encode-template/lib/forge-std" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Homework4/foundry-encode-template/lib/forge-std/lib/ds-test" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Homework4/foundry-encode-template/lib/prb-test" vcs="Git" />
   </component>
 </project>

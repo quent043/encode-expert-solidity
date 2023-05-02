@@ -10,6 +10,8 @@ contract Add {
         assembly {
             let result := add(x, y)
             mstore(0x40, result)
+            // Set free mem pointer to next slot
+            mstore(0x40, add(0x40, 0x20))
         }
 
         assembly {

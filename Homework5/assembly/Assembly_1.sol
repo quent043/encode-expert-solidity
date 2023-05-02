@@ -15,6 +15,10 @@ contract Intro {
             let y := mol
             let nextFreeMemoryLocation := 0x40
             mstore(mload(nextFreeMemoryLocation), y)
+            //Update free memory pointer
+            mstore(0x40, add(nextFreeMemoryLocation, 0x20))
+            //Can we do that?
+//            mstore(0x40, add(nextFreeMemoryLocation, mol))
             return(0x40, 0x20)
         }
     }

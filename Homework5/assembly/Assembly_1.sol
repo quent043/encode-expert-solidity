@@ -17,7 +17,8 @@ contract Intro {
             mstore(nextFreeMemoryLocation, y)
             result := mload(0x40)
         //Update free memory pointer
-            mstore(0x40, add(nextFreeMemoryLocation, 0x20))
+            nextFreeMemoryLocation := add(nextFreeMemoryLocation, 0x20)
+            mstore(0x40, nextFreeMemoryLocation)
         //Can we do that?
         //            mstore(0x40, add(nextFreeMemoryLocation, mol))
         }

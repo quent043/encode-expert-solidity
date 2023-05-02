@@ -8,7 +8,7 @@ contract Scope {
         // the assembly segment
         assembly {
             let count_slot := sload(0x00)
-            sstore(count_slot,11)
+            sstore(0x00, add(sload(0x00),num))
         }
     }
 }

@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "scripts": {
+    "format": "npx prettier --write .",
+    "lint": "eslint --fix --quiet ."
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.8.4",
+    "prettier-plugin-solidity": "^1.1.2"
+  }
+}

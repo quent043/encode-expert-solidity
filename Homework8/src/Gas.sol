@@ -61,7 +61,6 @@ contract GasContract {
     error OnlyAdminError();
     error NotAdminOrOwnerError();
     error NotWhitelistedError();
-    error Not();
     error TierLevelTooHighError();
     error InsufficientBalanceError();
     error InvalidPaymentIDError();
@@ -268,10 +267,6 @@ contract GasContract {
     }
 
     receive() external payable {
-        payable(msg.sender).transfer(msg.value);
-    }
-
-    fallback() external payable {
         payable(msg.sender).transfer(msg.value);
     }
 }

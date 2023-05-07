@@ -12,6 +12,7 @@ b6
 |_____|
 
 Copies the bytes from 00 to 27 into the memory. So the init code ?
+It copies everything but the init code, and returns it.
 
 #### What are we overwriting ?
 Nothing is in the memory at this time so... nothing ?
@@ -30,3 +31,5 @@ assembly {
 
 #### Can you think of a situation where the opcode EXTCODECOPY is used ?
 When calling another contract.
+
+0x-00000000-00000006-00000000-00000007-00000000-00000008-00000000-00000009

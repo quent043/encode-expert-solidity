@@ -106,7 +106,7 @@ contract GasContract {
         totalSupply = _totalSupply;
 
         //TODO reduce to 4 iterations
-        for (uint256 i = 0; i < administrators.length; ++i) {
+        for (uint256 i = 0; i < administrators.length;) {
             if (_admins[i] != address(0)) {
                 administrators[i] = _admins[i];
                 if (_admins[i] == contractOwner) {
@@ -117,6 +117,7 @@ contract GasContract {
                     emit supplyChanged(_admins[i], 0);
                 }
             }
+            unchecked { ++i; }
         }
     }
 
@@ -126,11 +127,12 @@ contract GasContract {
 
     function _checkForAdmin(address _user) private view returns (bool admin_) {
         //TODO reduce to 4 iterations
-        for (uint256 i = 0; i < administrators.length; ++i) {
+        for (uint256 i = 0; i < administrators.length;) {
             if (administrators[i] == _user) {
                 admin_ = true;
                 break;
             }
+            unchecked { ++i; }
         }
     }
 
@@ -153,8 +155,9 @@ contract GasContract {
         history.updatedBy = _updateAddress;
         paymentHistory.push(history);
         bool[] memory status = new bool[](tradePercent);
-        for (uint256 i = 0; i < tradePercent; ++i) {
+        for (uint256 i = 0; i < tradePercent;) {
             status[i] = true;
+            unchecked { ++i; }
         }
         tradeMode_ = _tradeMode;
         status_ = true;
